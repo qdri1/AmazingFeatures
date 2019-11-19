@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:kudri="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.example.amazingfeatures.universal.model.TestModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_default"
+                    android:padding="@dimen/margin_default"
+                    android:textColor="@android:color/black"
+                    android:onClick="@{() -> item.onClick.invoke(item.actionOpen)}"
+                    android:textSize="@dimen/text_size_default"
+                    kudri:startString="@{@string/desc}"
+                    kudri:text="@{item.str1}"
+                    tools:text="Text 1" />
+
+            <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="@dimen/margin_default"
+                    android:contentDescription="@string/some_text"
+                    kudri:src="@{item.img}"
+                    tools:src="@drawable/rahmet_logo" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_default"
+                        android:padding="@dimen/margin_default"
+                        android:text="@{item.str2}"
+                        android:textColor="#3264f9"
+                        android:textSize="@dimen/text_size_default"
+                        tools:text="Text 2" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_default"
+                        android:padding="@dimen/margin_default"
+                        android:text="@{item.str3}"
+                        android:onClick="@{() -> item.onClick.invoke(item.actionDelete)}"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_default"
+                        tools:text="Text 3" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AmazingFeatures</string>
+    <string name="ok">Ок</string>
+    <string name="some_text">Text</string>
+    <string name="desc">Описание:</string>
+    <string name="text">It is long text</string>
+</resources>
