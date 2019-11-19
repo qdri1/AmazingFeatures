@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUniversalAdapter()
+//        setCompositeAdapter()
     }
 
 
@@ -151,10 +152,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
     }
-    //endregion
 
-
-    //region Universal Adapter Support
     private fun onItemClick(type: Int, model: TestModel, position: Int) {
         println("###position = $position")
         println("###model = $model")
@@ -164,7 +162,6 @@ class MainActivity : AppCompatActivity() {
             model.actionEdit -> println("###action = edit")
             model.actionDelete -> println("###action = delete")
             model.actionShowImage -> println("###action = show image")
-            10 -> println("###10dasdas")
         }
     }
     //endregion

@@ -25,12 +25,6 @@ open class UniversalRecyclerViewAdapter<T : UniversalItemInterface>(
     override fun onBindViewHolder(holder: RecyclerItemViewHolder<T>, position: Int) {
         val item = items[position]
         holder.bind(item)
-
-        holder.itemView.setOnLongClickListener {
-            onAnyItemClick(10, item, position)
-            true
-        }
-
         item.onClick = {
                 type -> onAnyItemClick(type, item, position)
         }
