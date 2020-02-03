@@ -1,3 +1,2 @@
-# AmazingFeatures
-Universal Adapter
+# Universal Adapter
 Download and just launch it :)
